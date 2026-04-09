@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #0f0f13;
+    --card: #1a1a24;
+    --accent: #f0e040;
+    --text: #f0f0f0;
+    --muted: #888;
+    --border: #2a2a38;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: -2px;
+    color: var(--accent);
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+#quiz {
+    width: 100%;
+    max-width: 580px;
+}
+
+#questionBox {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 32px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+#answerButtons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+button {
+    background: var(--card);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 24px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    width: 100%;
+}
+
+button:hover {
+    background: var(--accent);
+    color: #000;
+    border-color: var(--accent);
+    transform: translateX(6px);
+}
+
+button:active {
+    transform: translateX(3px);
+}
+
+#score-box {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.1rem;
+    color: var(--muted);
+    text-align: right;
+    letter-spacing: 1px;
+}
