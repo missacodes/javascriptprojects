@@ -11,7 +11,7 @@ function checkAnswer (answerIndex)
 function nextQuestion(answerIndex) {
     checkAnswer(answerIndex)
     if (currentQuestion >= questions.length-1){
-        document.getElementById("quiz").innerHTML = "<b>Quiz complete! <br> The Score Is: </b>" +(score)
+        document.getElementById("quiz").innerHTML = "<p id=''<b>Quiz complete! <br> The Score Is: </b>" +(score)
 
     }
     else {

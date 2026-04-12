@@ -96,3 +96,11 @@ button:active {
     text-align: right;
     letter-spacing: 1px;
 }
+#final-score {
+    font-family: 'Syne', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--text);
+    text-align: center;
+    margin-top: 20px;
+}
