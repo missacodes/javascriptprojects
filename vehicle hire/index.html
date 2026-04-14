@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fordham Vehicle Hire</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<div class="wrapper">
+    <div class="header">
+        <h1>Fordham Vehicle Hire</h1>
+        <p>Instant Quote Calculator</p>
+    </div>
+    <div class="form-card">
+
+        <div class="field">
+            <label>What type of vehicle do you want?</label>
+            <select id="vehicleType">
+                <option value="X">Select Vehicle type</option>
+                <option value="Saloon">Saloon</option>
+                <option value="Van">Van</option>
+                <option value="High Performance">High Performance</option>
+            </select>
+        </div>
+
+        <div class="field">
+            <label>Number of Days</label>
+            <input type="number" id="days">
+        </div>
+
+        <div class="field">
+            <label>Do you need insurance?</label>
+            <div class="radio-group">
+                <div class="radio-option">
+                    <input type="radio" value="yes" name="insurance"> Yes
+                </div>
+                <div class="radio-option">
+                    <input type="radio" value="no" name="insurance"> No
+                </div>
+            </div>
+        </div>
+
+        <div class="field">
+            <label>Are you a new or existing customer?</label>
+            <div class="radio-group">
+                <div class="radio-option">
+                    <input type="radio" value="new" onclick="radio()" name="customer"> New
+                </div>
+                <div class="radio-option">
+                    <input type="radio" value="existing" onclick="radio()" name="customer"> Existing
+                </div>
+            </div>
+        </div>
+
+        <div id="hide">
+            <div class="field">
+                <label>Select loyalty card</label>
+                <select id="loyaltyCard">
+                    <option value="X">Select loyalty card</option>
+                    <option value="gold">Gold</option>
+                    <option value="silver">Silver</option>
+                    <option value="bronze">Bronze</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <button type="button" onclick="calculateQuote()">Get Quote</button>
+
+        <p id="finalQuote"></p>
+
+    </div>
+</div>
+</body>
+</html>

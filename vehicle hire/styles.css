@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #f7f7f5;
+    --white: #ffffff;
+    --orange: #f45c0a;
+    --orange-dark: #c94a06;
+    --text: #111111;
+    --muted: #666666;
+    --border: #e0e0e0;
+    --card: #ffffff;
+}
+
+body {
+    background-color: var(--bg);
+    background-image:
+            linear-gradient(45deg, transparent 40%, rgba(244,92,10,0.03) 40%, rgba(244,92,10,0.03) 60%, transparent 60%),
+            linear-gradient(-45deg, transparent 40%, rgba(244,92,10,0.03) 40%, rgba(244,92,10,0.03) 60%, transparent 60%);
+    background-size: 60px 60px;
+    font-family: 'Barlow', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 520px;
+}
+
+.header {
+    background: var(--orange);
+    padding: 28px 32px;
+    clip-path: polygon(0 0, 100% 0, 96% 100%, 0% 100%);
+}
+
+.header h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: white;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.header p {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.8);
+    margin-top: 2px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.form-card {
+    background: var(--card);
+    border: 2px solid var(--border);
+    border-top: none;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+select, input[type="number"] {
+    width: 100%;
+    background: var(--bg);
+    border: 2px solid var(--border);
+    font-family: 'Barlow', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 12px 16px;
+    color: var(--text);
+    appearance: none;
+    transition: border-color 0.15s ease;
+}
+
+select:focus, input[type="number"]:focus {
+    outline: none;
+    border-color: var(--orange);
+}
+
+.radio-group {
+    display: flex;
+    gap: 12px;
+}
+
+.radio-option {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 2px solid var(--border);
+    padding: 10px 16px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.15s ease;
+}
+
+.radio-option:hover {
+    border-color: var(--orange);
+    color: var(--orange);
+}
+
+input[type="radio"] {
+    accent-color: var(--orange);
+    width: 16px;
+    height: 16px;
+}
+
+.divider {
+    height: 2px;
+    background: linear-gradient(to right, var(--orange), transparent);
+}
+
+button[type="button"] {
+    width: 100%;
+    background: var(--orange);
+    color: white;
+    border: none;
+    padding: 16px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.15s ease;
+    margin-top: 8px;
+}
+
+button[type="button"]:hover {
+    background: var(--orange-dark);
+}
+
+#finalQuote {
+    font-family: 'Barlow', sans-serif;
+    font-size: 0.95rem;
+    line-height: 2;
+    color: var(--text);
+    border-left: 4px solid var(--orange);
+    padding: 16px 20px;
+    background: var(--bg);
+    display: none;
+}
+
+#finalQuote:not(:empty) {
+    display: block;
+}
+
+#hide {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
