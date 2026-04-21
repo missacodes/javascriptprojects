@@ -47,7 +47,7 @@ function calculateQuote () {
         return
     }
 
-    if (customerType === "existing" && cardType === "X")
+    if (customerType === "Existing" && cardType === "X")
     {
         alert("Please select card type")
         return
@@ -76,7 +76,7 @@ function calculateQuote () {
         totalCost = totalCost-discount2
 
     }
-    if (insurance === "yes") {
+    if (insurance === "Yes") {
         totalCost = totalCost + 15.5
     }
     let finalCost = totalCost + 50
@@ -84,7 +84,7 @@ function calculateQuote () {
 
     finalQuote.innerHTML = "Vehicle Type: " + (vehicle) + "<br> No. of days hired: " + (numDays) +
         "<br> New or existing customer: " + (customerType) + "<br> Total hire cost (£50 deposit included) : £" + (finalCost) +
-        "<br> Insurance included:" + (insurance) + " <br> Discounts Applied: -£" + (discounts)
+        "<br> Insurance included: " + (insurance) + " <br> Discounts Applied: -£" + (discounts)
 
 }
 
@@ -92,7 +92,7 @@ function radio () {
     const customerChecked = document.querySelector('input[name="customer"]:checked')
 
     let customerType = customerChecked.value
-    if (customerType === "existing") {
+    if (customerType === "Existing") {
         cards.style.display = "block";
     }
     else {
